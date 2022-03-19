@@ -8,18 +8,70 @@ body * {
     grid-template-rows: 1fr 5fr;
 }
 
+.header {
+    text-align: center;
+    padding: 5px;
+    color: white;
+    background: linear-gradient(90deg, rgb(67, 2, 187), rgb(2, 2, 63));
+    padding-top: 20px;
+}
+
 .main {
     display: grid;
     grid-template-columns: 1fr 3fr;
+}
+
+.city-search {
+    padding: .5em;
 }
 
 .search-form {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin: .5em;
+    margin-bottom: .5em;
+    border-bottom: 5px solid;
 }
 
-.search-form > * {
+.city-search-box {
     margin-bottom: .8em;
 }
+
+.search-history {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.city-search-btn {
+    width: 100%;
+    height: 40px;
+    margin-bottom: .8em;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    background-color: lightgrey;
+    line-height: 40px;
+}
+
+.search {
+    background-color: cyan;
+}
+
+.city-search-btn > span {
+    margin: auto;
+    width: 400px;
+    border: none;
+}
+
+.city-results {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.city-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
