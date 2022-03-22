@@ -3,6 +3,18 @@ function tempConversion(temp) {
     return Math.floor((temp - 273.15) * 9/5 + 32 );
 }
 
+function populateDate(response) {
+
+    let temp = tempConversion(response.current.temp);
+    for (let i = 0; i < 5; i++) {
+        let day = response.daily[i]
+
+        let date = new Date(day.dt).toDateString();
+
+        console.log(date)
+    }
+}
+
 function getWeather () {
 
     let searchText = $("#search").val();
@@ -21,10 +33,8 @@ function getWeather () {
             fetch("http://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + long + "&appid=b1ceae313f004765b6fc393e0cc38135")
                 .then(response => response.json())
                 .then(function (response) {
-      
-                let temp = tempConversion(response.current.temp);
 
-            console.log(temp);
+            populateDate(response);
          })
     })     
 }; 
